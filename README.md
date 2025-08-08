@@ -71,12 +71,28 @@ In this project, ANFIS learns the relationship between **error yaw** (current ya
 - **Hybrid ANFIS + Reinforcement Learning:** Enhance adaptation to unknown terrains.
 - **Real-time Training:** Continuous online learning from sensor feedback.
 
+## 🎥 Simulation (Coming Soon)
+
+A dynamic simulation of the robotic leg's yaw motion — showing the smooth transition from 8° to 0° — is currently in development.  
+Stay tuned for a **3D visualization or MATLAB animation** demonstrating real-time foot positioning.
+
+👉 *This will include:*
+- Foot trajectory (x, y) based on yaw correction
+- Step-by-step motion preview
+- Comparison: FIS vs ANFIS movement style
+
 ---
 
 ## 📄 License
 This project is licensed under the [MIT License](LICENSE).
 
-
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 [![MATLAB](https://img.shields.io/badge/Tool-MATLAB-orange)](https://mathworks.com)
 [![ANFIS](https://img.shields.io/badge/Method-ANFIS-blue)](https://en.wikipedia.org/wiki/ANFIS)
+
+## 📬 Contact
+
+**Muchamad Fauzan Atha Artawan**  
+📧 muchamadfauzanathaartawan@gmail.com  
+🔗 [GitHub](https://github.com/0118200)  
+💼 [LinkedIn](coming soon xD)
