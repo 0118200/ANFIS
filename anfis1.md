@@ -1,7 +1,6 @@
 ```
 %dataset
 error_yaw = [26, 24 ,20, 16, 12, 10, 8, 6, 4, 2, 1,0.5,-1, -2, -4, -6, -8, -10, -12, -16, -20, -24, -26]; %input
-
 control_target = [24, 22, 18, 14, 10, 8, 6, 4, 2, 1, 0.5,0.15,-0.5, -1, -2, -4, -6, -8, -10, -14, -18, -22, -24]
 
 %data
@@ -46,7 +45,7 @@ rules  = [
 FIS = addRule(FIS, rules);
 
 %MASUK ANFIS PENGATURAN ANFIS
-opt = anfisOptions('InitialFIS', FIS, 'EpochNumber', 400, 'DisplayErrorValues', 1);
+opt = anfisOptions('InitialFIS', FIS, 'EpochNumber', 600, 'DisplayErrorValues', 1);
 
 %train ANFIS
 FIS_trained = anfis(data,opt);
@@ -56,7 +55,7 @@ writeFIS(FIS_trained, 'anfis_trained.fis');
 disp('model pelatihan disimpan');
 
 set_point = 0; %setpoint
-yaw = 20; %posisi awal
+yaw = 8; %posisi awal
 yaw_log = yaw;
 max_iter = 30;
 time_log = 0;
@@ -89,7 +88,7 @@ for k = 1:max_iter
 end;
 
 %evaluasi FIS
-test_input = [20]; %error
+test_input = [8]; %error
 
 %bandingkan
 pred_awal = evalfis(FIS, test_input);
@@ -133,6 +132,6 @@ end
 %hold off;
 
 %fprintf('Plot kurva kontrol ANFIS telah dibuat.\n');
+```
 %fprintf('Rentang error: -30 hingga +30 derajat\n');
 %fprintf('Output kontrol: dari %.2f hingga %.2f\n', min(control_output), max(control_output));
-```
