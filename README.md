@@ -1,5 +1,14 @@
 # Legged Robot Yaw Control with ANFIS  
 
+A **data-driven, adaptive control system** for robotic leg yaw positioning, implemented in MATLAB using the **Adaptive Neuro-Fuzzy Inference System (ANFIS)**. This project addresses a critical challenge in legged locomotion: achieving **smooth, stable, and intelligent motion** from an initial yaw angle (e.g., 8°) to a target set point (0°), avoiding abrupt corrections that degrade stability.
+
+Unlike traditional PID or manually tuned FIS controllers, this system **learns optimal control policies from training data**, enabling **human-like adaptation** and **fine-grained correction** near the target.
+
+![FIS vs ANFIS Comparison](comparison/FIs_vs_ANFIS_comparison.png)  
+*Control surface comparison: ANFIS learns a smoother, more precise response than manual FIS*
+
+---
+
 This intelligent step-by-step correction enhances stability, reduces overshoot, and creates a more natural movement pattern.
 
 ## 📌 Project Overview
