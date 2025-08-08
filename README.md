@@ -23,7 +23,7 @@ In legged robotics, **sudden movements** cause instability and energy waste. Sim
 Rather than fixed rules, ANFIS **learns optimal corrections** from training data:
 - **Input**: `error = current_yaw - set_point`
 - **Output**: `control` → how much to adjust
-- **Result**: **8° → 6.2° → 2.1° → 0.3° → 0.02°** (smooth, not instant)
+- **Result**: **8° → 2.2° → 1.5° → 0.5° → 0.02°** (smooth, not instant)
 
 This enables **natural, intelligent motion** — ideal for walking robots.
 
