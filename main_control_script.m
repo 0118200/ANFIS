@@ -132,4 +132,5 @@ end
 
 %fprintf('Plot kurva kontrol ANFIS telah dibuat.\n');
 %fprintf('Rentang error: -30 hingga +30 derajat\n');
+
 %fprintf('Output kontrol: dari %.2f hingga %.2f\n', min(control_output), max(control_output));
