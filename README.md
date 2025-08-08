@@ -16,3 +16,8 @@ A MATLAB-based **Adaptive Neuro-Fuzzy Inference System (ANFIS)** controller that
 ---
 
 ## 📂 Project Structure
+
+
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
+[![MATLAB](https://img.shields.io/badge/Tool-MATLAB-orange)](https://mathworks.com)
+[![ANFIS](https://img.shields.io/badge/Method-ANFIS-blue)](https://en.wikipedia.org/wiki/ANFIS)
