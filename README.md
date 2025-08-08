@@ -2,7 +2,7 @@
 
 A MATLAB-based **Adaptive Neuro-Fuzzy Inference System (ANFIS)** controller that guides a robotic leg to a target yaw position using intelligent learning. This project demonstrates how ANFIS improves control accuracy compared to a manually designed FIS.
 
-![FIS vs ANFIS Comparison](results/FIS_vs_ANFIS_comparison.png)
+![FIS vs ANFIS Comparison](comparison/FIS_vs_ANFIS_comparison.png)
 
 > ✅ **Converges faster** | ✅ **Smaller error** | ✅ **Self-learning control**
 
