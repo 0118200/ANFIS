@@ -4,7 +4,7 @@ A **data-driven, adaptive control system** for robotic leg yaw positioning, impl
 
 Unlike traditional PID or manually tuned FIS controllers, this system **learns optimal control policies from training data**, enabling **human-like adaptation** and **fine-grained correction** near the target.
 
-![FIS vs ANFIS Comparison](comparison/FIs_vs_ANFIS_comparison.png)  
+![FIS vs ANFIS Comparison](comparison/FIS_vs_ANFIS_comparison.png)  
 *Control surface comparison: ANFIS learns a smoother, more precise response than manual FIS*
 
 ---
