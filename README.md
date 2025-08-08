@@ -1,47 +1,81 @@
-# 🤖 ANFIS Yaw Controller for Robotic Leg
+# Legged Robot Yaw Control with ANFIS  
 
-A MATLAB-based **Adaptive Neuro-Fuzzy Inference System (ANFIS)** controller designed to enable **smooth and intelligent yaw motion** in a robotic leg. This project simulates a real-world scenario:
+This intelligent step-by-step correction enhances stability, reduces overshoot, and creates a more natural movement pattern.
 
-> _"A robotic leg starts at **yaw = 8°** and must reach **yaw = 0°** — not in one abrupt move, but through **gradual, intelligent corrections**."_  
+## 📌 Project Overview
+This project explores the implementation of **Adaptive Neuro-Fuzzy Inference System (ANFIS)** for smooth yaw control in a **legged robot**.  
+The specific case study focuses on transitioning the robot’s yaw angle from **8° to the setpoint 0°** in a smooth, controlled manner — avoiding abrupt changes that could destabilize the robot.
 
-Instead of rigid control, ANFIS learns from data to make **smarter, smoother adjustments**, mimicking natural motion for stable robotic locomotion.
-
-![FIS vs ANFIS Comparison](comparison/FIS_vs_ANFIS_comparison.png)  
-*ANFIS produces smoother control actions for precise foot placement*
-
----
-
-## 🎯 Case Study: Smooth Transition from 8° to 0°
-
-### 🧩 Problem
-In legged robotics, **sudden movements** cause instability and energy waste. Simply jumping from 8° to 0° is unrealistic. The leg must:
-- Move **gradually**
-- Respond to **real-time error**
-- Avoid overshoot near the target
-
-### 💡 Solution: ANFIS for Adaptive Control
-Rather than fixed rules, ANFIS **learns optimal corrections** from training data:
-- **Input**: `error = current_yaw - set_point`
-- **Output**: `control` → how much to adjust
-- **Result**: **8° → 2.2° → 1.5° → 0.5° → 0.02°** (smooth, not instant)
-
-This enables **natural, intelligent motion** — ideal for walking robots.
+Instead of jumping directly from 8° to 0°, the ANFIS model ensures a gradual transition:
 
 ---
 
-## ⚙️ How It Works
+## 🧠 Background: FIS & ANFIS
 
-### 1. **Training Phase**
-- Trained on 23 input-output pairs: `[error_yaw, control_target]`
-- Starts with a **Sugeno-type FIS** (manually designed)
-- ANFIS fine-tunes membership functions over **600 epochs**
+### Fuzzy Inference System (FIS)
+A **Fuzzy Inference System** uses fuzzy logic to map inputs to outputs based on predefined rules and membership functions.  
+While FIS is effective for control tasks, it relies heavily on manually crafted rules and cannot **learn** from data — making it less adaptive in dynamic or uncertain environments.
 
-### 2. **Control Loop (Simulation)**
-```matlab
-error = yaw - set_point;
-control = evalfis(FIS_trained, error);
-yaw = yaw - control;
-```
+### Adaptive Neuro-Fuzzy Inference System (ANFIS)
+**ANFIS** combines the interpretability of fuzzy systems with the adaptive learning power of neural networks.  
+It automatically adjusts membership functions and rule parameters through training, using real data.  
+In this project, ANFIS learns the relationship between **error yaw** (current yaw - setpoint) and the required **control adjustment**.
+
+---
+
+## 🤖 Case Study: Legged Robot Yaw Control
+
+- **Initial yaw position:** `8°`
+- **Target yaw position:** `0°`
+- **Control method:** ANFIS-trained model
+- **Goal:** Achieve smooth, adaptive correction to avoid mechanical stress and instability.
+
+**Why smooth control matters for legged robots:**
+- Sudden yaw changes can cause imbalance.
+- Gradual corrections improve walking stability.
+- Adaptive systems can handle terrain variations better.
+
+---
+
+## 🚀 Why ANFIS over FIS?
+
+| Feature                  | FIS (Traditional)         | ANFIS (Proposed)          |
+|--------------------------|---------------------------|---------------------------|
+| Rule Creation            | Manual                    | Data-driven               |
+| Adaptability             | Low                       | High                      |
+| Learning Capability      | None                      | Neural network-based      |
+| Output Smoothness        | Moderate                  | High                      |
+| Performance over time    | Static                    | Improves with training    |
+| Handling Nonlinearity    | Limited                   | Robust                    |
+
+---
+
+## 📊 Performance Highlights
+
+- **Smoother Trajectories:**  
+  ANFIS-generated control steps prevent sudden yaw jumps, reducing mechanical stress.
+
+- **Adaptive Learning:**  
+  The system automatically fine-tunes itself based on training data, improving performance with more usage.
+
+- **Noise Resilience:**  
+  Less sensitive to small sensor noise compared to static rule-based systems.
+
+- **Generalization:**  
+  Works not only for yaw control but can be adapted for pitch, roll, or even multi-legged gait synchronization.
+
+---
+
+## 🔮 Potential Improvements
+- **Multi-variable ANFIS:** Incorporate pitch and roll for full-body balance control.
+- **Hybrid ANFIS + Reinforcement Learning:** Enhance adaptation to unknown terrains.
+- **Real-time Training:** Continuous online learning from sensor feedback.
+
+---
+
+## 📄 License
+This project is licensed under the [MIT License](LICENSE).
+
 
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 [![MATLAB](https://img.shields.io/badge/Tool-MATLAB-orange)](https://mathworks.com)
