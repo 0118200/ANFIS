@@ -6,7 +6,7 @@ A MATLAB-based **Adaptive Neuro-Fuzzy Inference System (ANFIS)** controller desi
 
 Instead of rigid control, ANFIS learns from data to make **smarter, smoother adjustments**, mimicking natural motion for stable robotic locomotion.
 
-![FIS vs ANFIS Comparison](comparison/fis_vs_anfis_comparison.png)  
+![FIS vs ANFIS Comparison](comparison/FIS_vs_ANFIS_comparison.png)  
 *ANFIS produces smoother control actions for precise foot placement*
 
 ---
