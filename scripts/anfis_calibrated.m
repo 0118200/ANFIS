@@ -18,7 +18,7 @@ writeFIS(FIS_final, 'anfis_final.fis');      %simpan modul final
 disp('Model ANFIS final (real) telah disimpan!');
 
 test_error = [10; 9; -3; 12]; %tes input baru
-control_lama = evalfis(modul_lama, test_error); %simulasi (kontrol saat simulasi)
+control_lama = evalfis(FIS_lama, test_error); %simulasi (kontrol saat simulasi)
 control_baru = evalfis(FIS_final, test_error);  %data asli (kontrol praktek)
 
 fprintf('\nPerbandingan Output Kontrol:\n');    %perbandingan
@@ -66,3 +66,4 @@ if k == max_iter
     fprintf('\n  Simulasi berhenti karena mencapai maksimal iterasi (%d)\n', max_iter);
     fprintf('   Robot belum sepenuhnya lurus. Pertimbangkan tuning ulang ANFIS.\n');
 end
+
