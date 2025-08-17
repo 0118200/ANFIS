@@ -13,9 +13,9 @@ This intelligent step-by-step correction enhances stability, reduces overshoot, 
 
 ## 📌 Project Overview
 This project explores the implementation of **Adaptive Neuro-Fuzzy Inference System (ANFIS)** for smooth yaw control in a **legged robot**.  
-The specific case study focuses on transitioning the robot’s yaw angle from **8° to the setpoint 0°** in a smooth, controlled manner — avoiding abrupt changes that could destabilize the robot.
+The specific case study focuses on transitioning the robot’s yaw angle from **10° to the setpoint 0°** in a smooth, controlled manner — avoiding abrupt changes that could destabilize the robot.
 
-Instead of jumping directly from 8° to 0°, the ANFIS model ensures a gradual transition:
+Instead of jumping directly from 10° to 0°, the ANFIS model ensures a gradual transition:
 
 ---
 
@@ -34,7 +34,7 @@ In this project, ANFIS learns the relationship between **error yaw** (current ya
 
 ## 🤖 Case Study: Legged Robot Yaw Control
 
-- **Initial yaw position:** `8°`
+- **Initial yaw position:** `10°`
 - **Target yaw position:** `0°`
 - **Control method:** ANFIS-trained model
 - **Goal:** Achieve smooth, adaptive correction to avoid mechanical stress and instability.
