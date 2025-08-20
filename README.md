@@ -104,4 +104,4 @@ This project is licensed under the [MIT License](LICENSE).
 **Muchamad Fauzan Atha Artawan**  
 📧 muchamadfauzanathaartawan@gmail.com  
 🔗 [GitHub](https://github.com/0118200)  
-💼 [LinkedIn](coming soon xD)
+💼 [LinkedIn](https://www.linkedin.com/in/muchamad-fauzan-07621b313/)
